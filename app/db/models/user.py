@@ -1,10 +1,9 @@
-from sqlalchemy import String
-from sqlalchemy.orm import Mapped
-from sqlalchemy.orm import relationship
-from sqlalchemy.orm import mapped_column
-from db.base import Base
-from core.enums import UserRole
 from sqlalchemy import Enum as SQLEnum
+from sqlalchemy import String
+from sqlalchemy.orm import Mapped, mapped_column, relationship
+
+from app.api.core.enums import UserRole
+from app.db.base import Base
 
 
 class User(Base):

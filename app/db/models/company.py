@@ -1,10 +1,6 @@
 from db.base import Base
-from db.models.user import User
-from sqlalchemy.orm import Mapped
-from sqlalchemy.orm import mapped_column
-from sqlalchemy.orm import relationship
-from sqlalchemy import String
-from sqlalchemy import ForeignKey
+from sqlalchemy import ForeignKey, String
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 
 class Company(Base):
