@@ -12,18 +12,3 @@ class Base(DeclarativeBase):
     @declared_attr.directive
     def __tablename__(cls):
         return cls.__name__.lower() + "s"
-
-
-class BaseDate(Base):
-    __abstract__ = True
-
-    created_at: Mapped[str] = mapped_column(
-        nullable=False,
-        server_default="now()",
-        server_onupdate="now()",
-    )
-    updated_at: Mapped[str] = mapped_column(
-        nullable=False,
-        server_default="now()",
-        server_onupdate="now()",
-    )
