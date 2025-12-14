@@ -1,0 +1,29 @@
+from sqlalchemy.orm import DeclarativeBase, declared_attr
+from sqlalchemy.orm import Mapped
+from sqlalchemy.orm import mapped_column
+
+
+class Base(DeclarativeBase):
+
+    __abstract__ = True
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+
+    @declared_attr.directive
+    def __tablename__(cls):
+        return cls.__name__.lower() + "s"
+
+
+class BaseDate(Base):
+    __abstract__ = True
+
+    created_at: Mapped[str] = mapped_column(
+        nullable=False,
+        server_default="now()",
+        server_onupdate="now()",
+    )
+    updated_at: Mapped[str] = mapped_column(
+        nullable=False,
+        server_default="now()",
+        server_onupdate="now()",
+    )

@@ -1,0 +1,101 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+*.pyo
+
+# Виртуальные окружения
+venv/
+env/
+.venv/
+.env/
+
+# Зависимости
+requirements.txt
+poetry.lock
+Pipfile.lock
+
+# Локальные базы данных
+*.db
+*.sqlite3
+*.sqlite
+
+# Логи и кэш
+logs/
+.log
+.cache/
+.pytest_cache/
+.coverage
+.coverage.*
+.hypothesis/
+
+# Файлы IDE
+.vscode/
+*.code-workspace
+
+# VS Code specific
+.vscode/*.json
+.vscode/*.code-snippets
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb
+
+# Тесты
+test_*.py
+tests/
+
+# Документация
+docs/_build/
+docs/generated/
+
+# Статика и медиа (если не деплоятся)
+static/
+media/
+
+# Конфигурационные файлы с секретами
+.env
+.env.*
+*.env
+
+# Локальные настройки
+local_settings.py
+
+# Пакеты и дистрибутивы
+dist/
+build/
+*.egg-info/
+*.egg
+*.whl
+
+# Временные файлы ОС
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# Другие
+*.swp
+*.swo
+*.tmp
+*~
+.fuse_tmp*
